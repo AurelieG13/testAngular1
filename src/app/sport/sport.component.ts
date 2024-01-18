@@ -45,6 +45,7 @@ export class SportComponent {
     this.totalService.updateTotal(this.totalFromService);
     this.totalService.updateTotalSeat(this.totalSeatFromService);
 
+
     console.log(this.message);
 
   }
@@ -56,4 +57,5 @@ export class SportComponent {
   getTotalSeat() {
     this.totalSeatSport = this.cartService.getTotalSeat();
   }
+
 }

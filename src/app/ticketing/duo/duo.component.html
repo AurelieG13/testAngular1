@@ -1,3 +1,57 @@
-<p>duo works!</p>
+<a routerLink="/ticketing" class="btn btn-primary mb-4">Retour</a>
 
-<a routerLink="/ticketing" class="btn btn-primary">Retour</a>
+<div>
+  <h3>Offre Duo</h3>
+</div>
+
+<h2 class="text-center">Sports</h2>
+<h3 class="text-center">LISTE DES SPORTS</h3>
+<div>
+  <table class="table table-striped table-bordered">
+    <thead class="table-light">
+      <tr>
+        <th>Sport</th>
+        <th>Places</th>
+        <th>Prix</th>
+        <th  class="text-center">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let sport of sports">
+      <tr>
+        <td>{{ sport.name }}</td>
+        <td>{{ sport.nbSeat }}</td>
+        <td>{{ sport.price }} €</td>
+        <td>
+          <button class="btn btn-success" (click)="addToCart(sport)">
+            Ajouter au panier
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button [disabled]="totalSeatFromService < 2"type="button" class="btn btn-success" routerLink="/cart"
+    >Accéder au panier</button
+  >
+
+  <div class="mt-4 mb-4">
+    <h5>Récapitulatif panier</h5>
+    <table class="table-sm table-striped table-bordered">
+      <thead class="table-light">
+        <tr>
+          <th>Montant total panier</th>
+          <th>Nombre de Places</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ totalFromService }} €</td>
+          <td>{{ totalSeatFromService}} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="addMessage == 2" class="alert alert-danger" role="alert">
+    {{ message}}
+  </div>
+</div>
