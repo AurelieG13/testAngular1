@@ -12,6 +12,7 @@ import { SoloComponent } from './ticketing/solo/solo.component';
 import { DuoComponent } from './ticketing/duo/duo.component';
 import { FamilyComponent } from './ticketing/family/family.component';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   { path:"home", component: HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: "ticketing/duo", component: DuoComponent},
   { path: "ticketing/family", component: FamilyComponent},
   { path:"cart", component: CartComponent},
+  { path: "payment", component: PaymentComponent},
   { path:"register", component: RegisterComponent},
   { path:"login", component: LoginComponent},
   { path:"admindashboard", component: AdmindashboardComponent},

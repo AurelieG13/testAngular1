@@ -22,6 +22,7 @@ import { FamilyComponent } from './ticketing/family/family.component';
 import { SportComponent } from './sport/sport.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CartComponent } from './cart/cart.component';
     DuoComponent,
     FamilyComponent,
     SportComponent,
-    CartComponent
+    CartComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
