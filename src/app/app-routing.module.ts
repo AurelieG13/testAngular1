@@ -8,10 +8,10 @@ import { LoginComponent } from './login/login.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { EditprofiluserComponent } from './editprofiluser/editprofiluser.component';
-import { BookingComponent } from './booking/booking.component';
 import { SoloComponent } from './ticketing/solo/solo.component';
 import { DuoComponent } from './ticketing/duo/duo.component';
 import { FamilyComponent } from './ticketing/family/family.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path:"home", component: HomeComponent},
@@ -20,12 +20,12 @@ const routes: Routes = [
   { path: "ticketing/solo", component: SoloComponent},
   { path: "ticketing/duo", component: DuoComponent},
   { path: "ticketing/family", component: FamilyComponent},
+  { path:"cart", component: CartComponent},
   { path:"register", component: RegisterComponent},
   { path:"login", component: LoginComponent},
   { path:"admindashboard", component: AdmindashboardComponent},
   { path:"userdashboard", component: UserdashboardComponent},
   { path:"editprofiluser", component: EditprofiluserComponent},
-  { path:"booking",component: BookingComponent},
   { path:"", redirectTo: "home", pathMatch:"full"}
 ];
 

@@ -1,0 +1,29 @@
+<h2>Panier</h2>
+<a routerLink="/ticketing" class="btn btn-primary">Retour</a>
+<table class="table table-striped table-bordered">
+  <thead class="table-light">
+    <tr>
+      <th>Sport</th>
+      <th>Places</th>
+      <th>Prix</th>
+      <th colspan="2" class="text-center">Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of items; let i = index">
+    <tr>
+      <td>{{ item.name }}</td>
+      <td>{{ item.nbSeat }}</td>
+      <td>{{ item.price }} €</td>
+      <td>
+        <button class="btn btn-danger" (click)="removeItem(i)">
+          Supprimer
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div>Total du panier : {{ getTotal() }} €</div>
+<button class="btn btn-success" type="button" routerLink="/payment">
+  Payer
+</button>

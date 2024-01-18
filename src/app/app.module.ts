@@ -16,10 +16,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { EditprofiluserComponent } from './editprofiluser/editprofiluser.component';
-import { BookingComponent } from './booking/booking.component';
 import { SoloComponent } from './ticketing/solo/solo.component';
 import { DuoComponent } from './ticketing/duo/duo.component';
 import { FamilyComponent } from './ticketing/family/family.component';
+import { SportComponent } from './sport/sport.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -35,17 +37,19 @@ import { FamilyComponent } from './ticketing/family/family.component';
     TicketingComponent,
     SidebarComponent,
     EditprofiluserComponent,
-    BookingComponent,
     SoloComponent,
     DuoComponent,
-    FamilyComponent
+    FamilyComponent,
+    SportComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

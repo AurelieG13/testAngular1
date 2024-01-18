@@ -1,0 +1,30 @@
+    <h2 class="text-center">Sports</h2>
+    <h3 class="text-center">LISTE DES SPORTS</h3>
+    <div>
+      <table class="table table-striped table-bordered">
+        <thead class="table-light">
+          <tr>
+            <th>Sport</th>
+            <th>Places</th>
+            <th>Prix</th>
+            <th colspan="2" class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let sport of sports">
+          <tr>
+            <td>{{ sport.name }}</td>
+            <td>{{ sport.nbSeat }}</td>
+            <td>{{ sport.price }} €</td>
+            <td>
+              <button class="btn btn-success" (click)="addToCart(sport)">Ajouter au panier</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a type="button" class="btn btn-success" routerLink="/cart">Accéder au panier</a>
+
+      <div *ngIf="addMessage == 1" class="alert alert-success" role="alert">
+        {{ message}}
+      </div>
+
+    </div>
