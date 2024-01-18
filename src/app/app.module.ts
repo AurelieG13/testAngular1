@@ -12,7 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { TicketingComponent } from './ticketing/ticketing.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { EditprofiluserComponent } from './editprofiluser/editprofiluser.component';
@@ -53,7 +53,7 @@ import { PaymentComponent } from './payment/payment.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [NgModel],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

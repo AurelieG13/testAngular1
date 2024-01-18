@@ -18,6 +18,10 @@ export class CartComponent {
     return this.cartService.getTotal();
   }
 
+  getTotalSeat() {
+    return this.cartService.getTotalSeat();
+  }
+
   removeItem(index: number) {
     this.cartService.removeItem(index);
   }
