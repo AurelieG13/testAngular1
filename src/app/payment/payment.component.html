@@ -18,13 +18,13 @@
 <hr>
 <div *ngIf="radioValue === 'flexRadioDefault1'">
   <form [formGroup]="paymentForm" (ngSubmit)="onSubmitCheck()">
-    <label class="form-label" for="beneficiaryName">Nom de l'emetteur du chèque:</label>
+    <label class="form-label" for="beneficiaryName">Nom de l'emetteur du chèque :</label>
     <input class="form-control" type="text" id="beneficiaryName" formControlName="beneficiaryName">
 
-    <label class="form-label" for="amount">Montant:</label>
+    <label class="form-label" for="amount">Montant : </label>
     <input class="form-control" type="number" id="amount" formControlName="amount">
 
-    <label class="form-label" for="checkNumber">Numéro de chèque:</label>
+    <label class="form-label" for="checkNumber">Numéro de chèque :</label>
     <input class="form-control" type="text" id="checkNumber" formControlName="checkNumber">
 
     <!-- Ajoutez d'autres champs si nécessaire -->
@@ -39,13 +39,13 @@
 
 <div *ngIf="radioValue === 'flexRadioDefault2'">
     <form [formGroup]="paymentFormCb" (ngSubmit)="onSubmitCb()">
-    <label class="form-label" for="cbNumber">Numero de CB:</label>
+    <label class="form-label" for="cbNumber">Numero de CB :</label>
     <input class="form-control" type="number" id="cbNumber" formControlName="cbNumber">
 
-    <label class="form-label" for="validityDate">Date de validité:</label>
+    <label class="form-label" for="validityDate">Date de validité :</label>
     <input class="form-control" type="number" id="validityDate" formControlName="validityDate">
 
-    <label class="form-label" for="securityCode">Code de sécurité:</label>
+    <label class="form-label" for="securityCode">Code de sécurité :</label>
     <input class="form-control" type="text" id="securityCode" formControlName="securityCode">
 
     <!-- Ajoutez d'autres champs si nécessaire -->

@@ -1,5 +1,9 @@
-<h2 class="text-center">Sports</h2>
-<h3 class="text-center">LISTE DES SPORTS</h3>
+<form class="form-inline">
+  <div class="form-group mx-sm-3 mb-2 mt-4">
+    <label><h4>Recherche par sport</h4></label>
+    <input placeholder="Saisir ici le sport à rechercher" type="text" class="form-control" #searchTerm (keyup)="onKeyUp(searchTerm.value)">
+  </div>
+</form>
 <div>
   <table class="table table-striped table-bordered">
     <thead class="table-light">

@@ -58,4 +58,8 @@ export class SportComponent {
     this.totalSeatSport = this.cartService.getTotalSeat();
   }
 
+  onKeyUp(filterText: string) {
+    this.sports = this.sports.filter(item => item.name.toLowerCase().includes(filterText));
+  }
+
 }

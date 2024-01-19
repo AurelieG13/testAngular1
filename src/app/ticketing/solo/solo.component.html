@@ -35,6 +35,9 @@
 
   <div class="mt-4 mb-4">
     <h5>Récapitulatif panier</h5>
+      <div *ngIf="addMessage == 2" class="alert alert-danger" role="alert">
+        {{ message}}
+      </div>
     <table class="table-sm table-striped table-bordered">
       <thead class="table-light">
         <tr>
@@ -49,9 +52,5 @@
         </tr>
       </tbody>
     </table>
-  </div>
-
-  <div *ngIf="addMessage == 2" class="alert alert-danger" role="alert">
-    {{ message}}
   </div>
 </div>
